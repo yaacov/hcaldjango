@@ -1,0 +1,104 @@
+{% load i18n %} 
+<html>
+<head>
+<title>calendar</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="/static/css/calendar.css" />
+</head>
+<body>
+
+<div class="page first">
+    <div class="placeholeder"></div>
+    <h1 class="hyear">{{ header.hyear }}</h1>
+    <h1 class="gyear">{{ header.gyear }}</h1>
+    <h1>{% trans "Happy and blessed year" %}</h1>
+    <h1>{% trans "Year of peace and love" %}</h1>
+    <h1>{% trans "Year of happiness" %}</h1>
+    <div class="placeholeder"></div>
+    <p>{% trans "year" %} {{ header.israel }} {% trans "for the state of Israel" %}</p>
+    <p>{% trans "year" %} {{ header.jerusalem }} {% trans "for the unification of Jerusalem" %}</p>
+    <p>{% trans "year" %} {{ header.mered_gadol }} {% trans "for the fall of Jerusalem" %}</p>
+</div>
+
+{% if weeks %}
+{% for week in weeks %}
+<div class="page">
+
+    <div class="header">
+        <img src="{{ week.header.image }}" />
+        <table>
+          <tr>
+            <td class="month month-a">{{ week.header.gmonth }}</td>
+            <td class="month month-b">{{ week.header.hmonth }}</td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td class="year year-a">{{ week.header.gyear }}</td>
+            <td class="year year-b">{{ week.header.hyear }}</td>
+          </tr>
+        </table>
+    </div>
+
+    {% if week.days %}
+    <div class="calendar-week">
+    <table>
+        
+        {% for day in week.days %}
+        <tr class="day {{ day.class }}">
+            <td class="day-a">
+                {{ day.gdate.day }}
+            </td>
+            <td class="day-b">
+                {% trans 'Sunrise' %}<br/>
+                {{ day.times.sunrise }}<br/>
+                {% trans 'Sunset' %}<br/>
+                {{ day.times.sunset }}<br/>
+            </td>
+            <td class="day-c">
+                {{ day.gdate.day_of_week_str }}
+                {% if day.hdate.day_num == 1%}
+                    - {% trans "first day in month" %} {{ day.hdate.month_str }}
+                {% endif %}
+                {% if day.omer.is_omer %}
+                    - {{ day.omer.number }} {% trans "on the omer" %}
+                {% endif %}
+                <br/>
+                {% if day.holiday.type != 0 %}
+                    {{ day.holiday.title }}
+                {% endif %}
+                {% if day.parasha.is_parasha %}
+                    {{ day.parasha.title }}
+                {% endif %}
+                <br/>
+                <br/>
+                {% if day.gdate.day_of_week == 6 %}
+                    {% trans 'Candle light' %} {{ day.times.candlelight }}
+                {% elif day.is_erev_hag and not day.is_hag %}
+                    {% trans 'Candle light' %} {{ day.times.candlelight }}
+                {% elif day.gdate.day_of_week == 7 %}
+                    {% trans 'Shabat ends ' %} {{ day.times.three_stars }}
+                {% elif day.is_hag and not day.is_erev_hag %}
+                    {% trans 'Hag ends ' %} {{ day.times.three_stars }}
+                {% endif %}
+                <br/>
+            </td>
+            <td class="day-d">
+              {{ day.hdate.day }}
+            </td>
+        </tr>
+        {% endfor %}
+        
+    </table>
+    </div>
+    {% endif %}
+
+</div>
+{% endfor %}
+{% endif %}
+
+</body>
+</html>
+
+
+

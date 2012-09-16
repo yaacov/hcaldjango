@@ -1,0 +1,132 @@
+/* calendar main body */
+body {
+  background: white;
+  
+  font-size: 12px;
+  font-family: arial,sans-serif;
+}
+
+/* page for printing a calendar
+   A4 - page size 210mm x 297mm */
+.page {
+  width: 165mm;
+  height: 245mm;
+  margin: 0 auto;
+  page-break-after: always;
+}
+
+/* first page */
+.page.first h1 {
+    font-size: 22px;
+    text-align: center;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.page.first h1.hyear{
+    font-size: 42px;
+    color: red;
+}
+.page.first h1.gyear{
+    font-size: 28px;
+    color: red;
+    margin-bottom: 35px;
+}
+.page.first p {
+    color: gray;
+    font-size: 12px;
+}
+.page.first .placeholeder {
+    height: 60mm;
+}
+
+/* a calendar header */
+.header {
+  width: 165mm;
+  height: 115mm;
+}
+.header img {
+  width: 165mm;
+  height: 90mm;
+  padding: 5px;
+  border: 1px solid lightgray;
+}
+.header table {
+  width: 165mm;
+  color: black;
+}
+
+.header .year {
+  font-size: 24px;
+  color: black;
+}
+.header .year-a {
+}
+.header .year-b {
+  text-align: right;
+}
+
+.header .month {
+  font-size: 28px;
+  color: black;
+}
+.header .month-a {
+}
+.header .month-b {
+  text-align: right;
+}
+
+/* a weekly calendar page */
+.calendar-week table {
+  width: 165mm;
+  color: gray;
+}
+.calendar-week table td {
+  border-top: 1px solid lightgray;
+}
+
+.calendar-week .day {
+  font-size: 12px;
+  color: gray;
+}
+.calendar-week .rosh_hodesh {
+  color: black;
+}
+.calendar-week .yom_tov {
+  color: red;
+}
+.calendar-week .chol_hamoed {
+  color: black;
+}
+.calendar-week .tzom {
+  color: black;
+}
+.calendar-week .shishi {
+}
+.calendar-week .shabat {
+  color: red;
+}
+
+.calendar-week .day-a {
+  width: 15mm;
+  height: 15mm;
+  font-size: 36px;
+  text-align: center;
+}
+.calendar-week .day-b {
+  color: gray;
+  text-align: left;
+  vertical-align: top;
+}
+.calendar-week .day-c {
+  color: gray;
+  text-align: right;
+  vertical-align: top;
+}
+.calendar-week .day-d {
+  width: 15mm;
+  height: 15mm;
+  font-size: 36px;
+  text-align: center;
+}
+
