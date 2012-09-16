@@ -70,7 +70,7 @@ class HcalWrapper(Hdate):
         self.latitude = 34.8 # E
         self.time_zone = 3 # UTC+2 + DST+1
         
-        self.set_location (self.latitude, self.longitude, self.time_zone)
+        self.set_location (self.longitude, self.latitude, self.time_zone)
         
     def int_to_str(self, n):
         ''' convert numbers to Hebrew number strings
