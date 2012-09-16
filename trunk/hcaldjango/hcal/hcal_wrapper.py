@@ -144,6 +144,10 @@ class HcalWrapper(Hdate):
         
         output = {}
         
+        # libhdate 1.6 - 1.8 python bindings 
+        # have a bug with day of the week strings
+        day_strings = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        
         # get Gregorian date
         # day_fo_week - 1 .. 7 => Sunday .. Saturday
         output['gdate'] = {
@@ -152,7 +156,7 @@ class HcalWrapper(Hdate):
             'month_str' : self.get_month_string(False), 
             'year' : self.get_gyear(), 
             'day_of_week' : self.get_day_of_the_week(),
-            'day_of_week_str' : _(self.get_day_of_week_string(False)),}
+            'day_of_week_str' : _(day_strings[self.get_day_of_the_week() - 1]),}
         
         # get Hebrew date
         output['hdate'] = {
