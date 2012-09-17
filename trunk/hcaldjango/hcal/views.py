@@ -96,7 +96,7 @@ def index(request, hyear = 5773, theme = 'images'):
         
         # add an image for this week header
         image = hcal.get_weeks()
-        days['header']['image'] = '/static/%s/%d.png' % (theme, image % 10 + 1)
+        days['header']['image'] = '/static/%s/%d.png' % (theme, image % 20 + 1)
         
         weeks.append(days)
     
