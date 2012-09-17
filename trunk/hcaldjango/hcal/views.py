@@ -83,13 +83,13 @@ def index(request, hyear = 5773):
         'gyear' : '%d-%d' % (gyear - 1, gyear),
         'mered_gadol' : mered_gadol,
         'israel' : israel,
-        'jerusalem' : jerusalem
+        'jerusalem' : jerusalem,
+        'hebrew_year_length' : hyear_length
     }
     
     # get the weeks in this year's calendar
     weeks = []
-    leey_way = 7
-    for i in range(-leey_way, hyear_length + leey_way, 7):
+    for i in range(0, hyear_length + 7, 7):
         # move calendar to the printing week
         hcal.set_jd(jd_1_tishrey + i)
         days = hcal.week_to_dict()

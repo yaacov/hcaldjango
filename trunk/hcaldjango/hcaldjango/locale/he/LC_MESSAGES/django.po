@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-16 22:19+0300\n"
+"POT-Creation-Date: 2012-09-17 06:47+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,663 +18,663 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: hcal/hcal_stings.py:28
+#: hcal/hcal_strings.py:28
 msgid "Sun"
 msgstr "א"
 
-#: hcal/hcal_stings.py:29
+#: hcal/hcal_strings.py:29
 msgid "Mon"
 msgstr "ב"
 
-#: hcal/hcal_stings.py:30
+#: hcal/hcal_strings.py:30
 msgid "Tue"
 msgstr "ג"
 
-#: hcal/hcal_stings.py:31
+#: hcal/hcal_strings.py:31
 msgid "Wed"
 msgstr "ד"
 
-#: hcal/hcal_stings.py:32
+#: hcal/hcal_strings.py:32
 msgid "Thu"
 msgstr "ה"
 
-#: hcal/hcal_stings.py:33
+#: hcal/hcal_strings.py:33
 msgid "Fri"
 msgstr "ו"
 
-#: hcal/hcal_stings.py:34
+#: hcal/hcal_strings.py:34
 msgid "Sat"
 msgstr "ש"
 
-#: hcal/hcal_stings.py:35
+#: hcal/hcal_strings.py:35
 msgid "Sunday"
 msgstr "ראשון"
 
-#: hcal/hcal_stings.py:36
+#: hcal/hcal_strings.py:36
 msgid "Monday"
 msgstr "שני"
 
-#: hcal/hcal_stings.py:37
+#: hcal/hcal_strings.py:37
 msgid "Tuesday"
 msgstr "שלישי"
 
-#: hcal/hcal_stings.py:38
+#: hcal/hcal_strings.py:38
 msgid "Wednesday"
 msgstr "רביעי"
 
-#: hcal/hcal_stings.py:39
+#: hcal/hcal_strings.py:39
 msgid "Thursday"
 msgstr "חמישי"
 
-#: hcal/hcal_stings.py:40
+#: hcal/hcal_strings.py:40
 msgid "Friday"
 msgstr "שישי"
 
-#: hcal/hcal_stings.py:41
+#: hcal/hcal_strings.py:41
 msgid "Saturday"
 msgstr "שבת"
 
-#: hcal/hcal_stings.py:42
+#: hcal/hcal_strings.py:42
 msgid "Jan"
 msgstr "ינו"
 
-#: hcal/hcal_stings.py:43
+#: hcal/hcal_strings.py:43
 msgid "Feb"
 msgstr "פבר"
 
-#: hcal/hcal_stings.py:44
+#: hcal/hcal_strings.py:44
 msgid "Mar"
 msgstr "מרץ"
 
-#: hcal/hcal_stings.py:45
+#: hcal/hcal_strings.py:45
 msgid "Apr"
 msgstr "אפר"
 
-#: hcal/hcal_stings.py:46
+#: hcal/hcal_strings.py:46
 msgid "May"
 msgstr "מאי"
 
-#: hcal/hcal_stings.py:47
+#: hcal/hcal_strings.py:47
 msgid "Jun"
 msgstr "יוני"
 
-#: hcal/hcal_stings.py:48
+#: hcal/hcal_strings.py:48
 msgid "Jul"
 msgstr "יולי"
 
-#: hcal/hcal_stings.py:49
+#: hcal/hcal_strings.py:49
 msgid "Aug"
 msgstr "אוג"
 
-#: hcal/hcal_stings.py:50
+#: hcal/hcal_strings.py:50
 msgid "Sep"
 msgstr "ספט"
 
-#: hcal/hcal_stings.py:51
+#: hcal/hcal_strings.py:51
 msgid "Oct"
 msgstr "אוקט"
 
-#: hcal/hcal_stings.py:52
+#: hcal/hcal_strings.py:52
 msgid "Nov"
 msgstr "נוב"
 
-#: hcal/hcal_stings.py:53
+#: hcal/hcal_strings.py:53
 msgid "Dec"
 msgstr "דצמ"
 
-#: hcal/hcal_stings.py:54
+#: hcal/hcal_strings.py:54
 msgid "January"
 msgstr "ינואר"
 
-#: hcal/hcal_stings.py:55
+#: hcal/hcal_strings.py:55
 msgid "February"
 msgstr "פברואר"
 
-#: hcal/hcal_stings.py:56
+#: hcal/hcal_strings.py:56
 msgid "March"
 msgstr "מרץ"
 
-#: hcal/hcal_stings.py:57
+#: hcal/hcal_strings.py:57
 msgid "April"
 msgstr "אפריל"
 
-#: hcal/hcal_stings.py:58
+#: hcal/hcal_strings.py:58
 msgid "June"
 msgstr "יוני"
 
-#: hcal/hcal_stings.py:59
+#: hcal/hcal_strings.py:59
 msgid "July"
 msgstr "יולי"
 
-#: hcal/hcal_stings.py:60
+#: hcal/hcal_strings.py:60
 msgid "August"
 msgstr "אוגוסט"
 
-#: hcal/hcal_stings.py:61
+#: hcal/hcal_strings.py:61
 msgid "September"
 msgstr "ספטמבר"
 
-#: hcal/hcal_stings.py:62
+#: hcal/hcal_strings.py:62
 msgid "October"
 msgstr "אוקטובר"
 
-#: hcal/hcal_stings.py:63
+#: hcal/hcal_strings.py:63
 msgid "November"
 msgstr "נובמבר"
 
-#: hcal/hcal_stings.py:64
+#: hcal/hcal_strings.py:64
 msgid "December"
 msgstr "דצמבר"
 
-#: hcal/hcal_stings.py:65
+#: hcal/hcal_strings.py:65
 msgid "Tishrei"
 msgstr "תשרי"
 
-#: hcal/hcal_stings.py:66
+#: hcal/hcal_strings.py:66
 msgid "Cheshvan"
 msgstr "חשון"
 
-#: hcal/hcal_stings.py:67
+#: hcal/hcal_strings.py:67
 msgid "Kislev"
 msgstr "כסלו"
 
-#: hcal/hcal_stings.py:68
+#: hcal/hcal_strings.py:68
 msgid "Tevet"
 msgstr "טבת"
 
-#: hcal/hcal_stings.py:69
+#: hcal/hcal_strings.py:69
 msgid "Sh'vat"
 msgstr "שבט"
 
-#: hcal/hcal_stings.py:70
+#: hcal/hcal_strings.py:70
 msgid "Shevat"
 msgstr "שבט"
 
-#: hcal/hcal_stings.py:71
+#: hcal/hcal_strings.py:71
 msgid "Adar"
 msgstr "אדר"
 
-#: hcal/hcal_stings.py:72
+#: hcal/hcal_strings.py:72
 msgid "Nisan"
 msgstr "ניסן"
 
-#: hcal/hcal_stings.py:73
+#: hcal/hcal_strings.py:73
 msgid "Iyyar"
 msgstr "אייר"
 
-#: hcal/hcal_stings.py:74
+#: hcal/hcal_strings.py:74
 msgid "Sivan"
 msgstr "סיון"
 
-#: hcal/hcal_stings.py:75
+#: hcal/hcal_strings.py:75
 msgid "Tamuz"
 msgstr "תמוז"
 
-#: hcal/hcal_stings.py:76
+#: hcal/hcal_strings.py:76
 msgid "Tammuz"
 msgstr "תמוז"
 
-#: hcal/hcal_stings.py:77
+#: hcal/hcal_strings.py:77
 msgid "Av"
 msgstr "אב"
 
-#: hcal/hcal_stings.py:78
+#: hcal/hcal_strings.py:78
 msgid "Elul"
 msgstr "אלול"
 
-#: hcal/hcal_stings.py:79
+#: hcal/hcal_strings.py:79
 msgid "Adar I"
 msgstr "אדר א"
 
-#: hcal/hcal_stings.py:80
+#: hcal/hcal_strings.py:80
 msgid "Adar II"
 msgstr "אדר ב"
 
-#: hcal/hcal_stings.py:81
+#: hcal/hcal_strings.py:81
 msgid "Rosh Hashana I"
 msgstr "א ראש השנה"
 
-#: hcal/hcal_stings.py:82
+#: hcal/hcal_strings.py:82
 msgid "Rosh Hashana II"
 msgstr "ב ראש השנה"
 
-#: hcal/hcal_stings.py:83
+#: hcal/hcal_strings.py:83
 msgid "Rosh Hashana (first day)"
 msgstr "א ראש השנה"
 
-#: hcal/hcal_stings.py:84
+#: hcal/hcal_strings.py:84
 msgid "Rosh Hashana (second day)"
 msgstr "ב ראש השנה"
 
-#: hcal/hcal_stings.py:85
+#: hcal/hcal_strings.py:85
 msgid "Tzom Gedaliah"
 msgstr "צום גדליה"
 
-#: hcal/hcal_stings.py:86
+#: hcal/hcal_strings.py:86
 msgid "Yom Kippur"
 msgstr "יום כיפור"
 
-#: hcal/hcal_stings.py:87
+#: hcal/hcal_strings.py:87
 msgid "Erev_Sukkot"
 msgstr "ערב סוכות"
 
-#: hcal/hcal_stings.py:88
+#: hcal/hcal_strings.py:88
 msgid "Sukkot"
 msgstr "סוכות"
 
-#: hcal/hcal_stings.py:89
+#: hcal/hcal_strings.py:89
 msgid "Hol hamoed Sukkot"
 msgstr "חול המועד סוכות"
 
-#: hcal/hcal_stings.py:90
+#: hcal/hcal_strings.py:90
 msgid "Hoshana raba"
 msgstr "הושענא רבה"
 
-#: hcal/hcal_stings.py:91
+#: hcal/hcal_strings.py:91
 msgid "Simchat Torah"
 msgstr "שמחת תורה"
 
-#: hcal/hcal_stings.py:92
+#: hcal/hcal_strings.py:92
 msgid "Chanukah"
 msgstr "חנוכה"
 
-#: hcal/hcal_stings.py:93
+#: hcal/hcal_strings.py:93
 msgid "Asara B'Tevet"
 msgstr "עשרה בטבת"
 
-#: hcal/hcal_stings.py:94
+#: hcal/hcal_strings.py:94
 msgid "Tu B'Shvat"
 msgstr "ט\"ו בשבט"
 
-#: hcal/hcal_stings.py:95
+#: hcal/hcal_strings.py:95
 msgid "Ta'anit Esther"
 msgstr "תענית אסתר"
 
-#: hcal/hcal_stings.py:96
+#: hcal/hcal_strings.py:96
 msgid "Purim"
 msgstr "פורים"
 
-#: hcal/hcal_stings.py:97
+#: hcal/hcal_strings.py:97
 msgid "Shushan Purim"
 msgstr "שושן פורים"
 
-#: hcal/hcal_stings.py:98
+#: hcal/hcal_strings.py:98
 msgid "Erev Pesach"
 msgstr "ערב פסח"
 
-#: hcal/hcal_stings.py:99
+#: hcal/hcal_strings.py:99
 msgid "Pesach"
 msgstr "פסח"
 
-#: hcal/hcal_stings.py:100
+#: hcal/hcal_strings.py:100
 msgid "Hol hamoed Pesach"
 msgstr "חול המועד פסח"
 
-#: hcal/hcal_stings.py:101
+#: hcal/hcal_strings.py:101
 msgid "Yom HaAtzma'ut"
 msgstr "יום העצמאות"
 
-#: hcal/hcal_stings.py:102
+#: hcal/hcal_strings.py:102
 msgid "Lag B'Omer"
 msgstr "ל\"ג בעומר"
 
-#: hcal/hcal_stings.py:103
+#: hcal/hcal_strings.py:103
 msgid "Erev Shavuot"
 msgstr "ערב שבועות"
 
-#: hcal/hcal_stings.py:104
+#: hcal/hcal_strings.py:104
 msgid "Shavuot"
 msgstr "שבועות"
 
-#: hcal/hcal_stings.py:105
+#: hcal/hcal_strings.py:105
 msgid "Tzom Tammuz"
 msgstr "י\"ז תמוז"
 
-#: hcal/hcal_stings.py:106
+#: hcal/hcal_strings.py:106
 msgid "Tish'a B'Av"
 msgstr "תשעה באב"
 
-#: hcal/hcal_stings.py:107
+#: hcal/hcal_strings.py:107
 msgid "Tu B'Av"
 msgstr "ט\"ו באב"
 
-#: hcal/hcal_stings.py:108
+#: hcal/hcal_strings.py:108
 msgid "Yom HaShoah"
 msgstr "יום השואה"
 
-#: hcal/hcal_stings.py:109
+#: hcal/hcal_strings.py:109
 msgid "Yom HaZikaron"
 msgstr "יום הזיכרון"
 
-#: hcal/hcal_stings.py:110
+#: hcal/hcal_strings.py:110
 msgid "Yom Yerushalayim"
 msgstr "יום ירושלים"
 
-#: hcal/hcal_stings.py:111
+#: hcal/hcal_strings.py:111
 msgid "Shmini Atzeret"
 msgstr "שמיני עצרת"
 
-#: hcal/hcal_stings.py:112
+#: hcal/hcal_strings.py:112
 msgid "Pesach VII"
 msgstr "שביעי של פסח"
 
-#: hcal/hcal_stings.py:113
+#: hcal/hcal_strings.py:113
 msgid "Shevi'i shel Pesach"
 msgstr "שבועי של פסח"
 
-#: hcal/hcal_stings.py:114
+#: hcal/hcal_strings.py:114
 msgid "Pesach VIII"
 msgstr "שמיני של פסח"
 
-#: hcal/hcal_stings.py:115
+#: hcal/hcal_strings.py:115
 msgid "Acharon shel Pesach"
 msgstr "אחרון של פסח"
 
-#: hcal/hcal_stings.py:116
+#: hcal/hcal_strings.py:116
 msgid "Shavuot II"
 msgstr "שני של שבועות"
 
-#: hcal/hcal_stings.py:117
+#: hcal/hcal_strings.py:117
 msgid "Shavuot (second day)"
 msgstr "שני של שבועות"
 
-#: hcal/hcal_stings.py:118
+#: hcal/hcal_strings.py:118
 msgid "Sukkot II"
 msgstr "סוכות שני"
 
-#: hcal/hcal_stings.py:119
+#: hcal/hcal_strings.py:119
 msgid "Sukkot (second day)"
 msgstr "שני של סוכות"
 
-#: hcal/hcal_stings.py:120
+#: hcal/hcal_strings.py:120
 msgid "Pesach II"
 msgstr "שני של פסח"
 
-#: hcal/hcal_stings.py:121
+#: hcal/hcal_strings.py:121
 msgid "Pesach (second day)"
 msgstr "שני של פסח"
 
-#: hcal/hcal_stings.py:122
+#: hcal/hcal_strings.py:122
 msgid "Family Day"
 msgstr "יום המשפחה"
 
-#: hcal/hcal_stings.py:123
+#: hcal/hcal_strings.py:123
 msgid "Memorial day for fallen whose place of burial is unknown"
 msgstr "יום הזכרון לחללי מלחמות ישראל שמקום קבורתם לא נודע"
 
-#: hcal/hcal_stings.py:124
+#: hcal/hcal_strings.py:124
 msgid "Rabin memorial day"
 msgstr "יום הזכון ליצחק רבין"
 
-#: hcal/hcal_stings.py:125
+#: hcal/hcal_strings.py:125
 msgid "Zhabotinsky day"
 msgstr "יום זבוטינסקי"
 
-#: hcal/hcal_stings.py:126
+#: hcal/hcal_strings.py:126
 msgid "Erev Yom Kippur"
 msgstr "ערב יום כיפור"
 
-#: hcal/hcal_stings.py:127
+#: hcal/hcal_strings.py:127
 msgid "Yitzhak Rabin memorial day"
 msgstr "יום הזכרון ליצחק רבין"
 
-#: hcal/hcal_stings.py:128
+#: hcal/hcal_strings.py:128
 msgid "Zeev Zhabotinsky day"
 msgstr "יום זאב זבוטינסקי"
 
-#: hcal/hcal_stings.py:129
+#: hcal/hcal_strings.py:129
 msgid "in the Omer"
 msgstr "לספירת העומר"
 
-#: hcal/hcal_stings.py:130
+#: hcal/hcal_strings.py:130
 msgid "none"
 msgstr "חסר"
 
-#: hcal/hcal_stings.py:131
+#: hcal/hcal_strings.py:131
 msgid "Bereshit"
 msgstr "בראשית"
 
-#: hcal/hcal_stings.py:132
+#: hcal/hcal_strings.py:132
 msgid "Noach"
 msgstr "נח"
 
-#: hcal/hcal_stings.py:133
+#: hcal/hcal_strings.py:133
 msgid "Lech-Lecha"
 msgstr "לך לך"
 
-#: hcal/hcal_stings.py:134
+#: hcal/hcal_strings.py:134
 msgid "Vayera"
 msgstr "וירא"
 
-#: hcal/hcal_stings.py:135
+#: hcal/hcal_strings.py:135
 msgid "Chayei Sara"
 msgstr "חיי שרה"
 
-#: hcal/hcal_stings.py:136
+#: hcal/hcal_strings.py:136
 msgid "Toldot"
 msgstr "תולדות"
 
-#: hcal/hcal_stings.py:137
+#: hcal/hcal_strings.py:137
 msgid "Vayetzei"
 msgstr "ויצא"
 
-#: hcal/hcal_stings.py:138
+#: hcal/hcal_strings.py:138
 msgid "Vayishlach"
 msgstr "וישלח"
 
-#: hcal/hcal_stings.py:139
+#: hcal/hcal_strings.py:139
 msgid "Vayeshev"
 msgstr "וישב"
 
-#: hcal/hcal_stings.py:140
+#: hcal/hcal_strings.py:140
 msgid "Miketz"
 msgstr "מקץ"
 
-#: hcal/hcal_stings.py:141
+#: hcal/hcal_strings.py:141
 msgid "Vayigash"
 msgstr "ויגש"
 
-#: hcal/hcal_stings.py:142
+#: hcal/hcal_strings.py:142
 msgid "Vayechi"
 msgstr "ויחי"
 
-#: hcal/hcal_stings.py:143
+#: hcal/hcal_strings.py:143
 msgid "Shemot"
 msgstr "שמות"
 
-#: hcal/hcal_stings.py:144
+#: hcal/hcal_strings.py:144
 msgid "Vaera"
 msgstr "וארא"
 
-#: hcal/hcal_stings.py:145
+#: hcal/hcal_strings.py:145
 msgid "Bo"
 msgstr "בא"
 
-#: hcal/hcal_stings.py:146
+#: hcal/hcal_strings.py:146
 msgid "Beshalach"
 msgstr "בשלח"
 
-#: hcal/hcal_stings.py:147
+#: hcal/hcal_strings.py:147
 msgid "Yitro"
 msgstr "יתרו"
 
-#: hcal/hcal_stings.py:148
+#: hcal/hcal_strings.py:148
 msgid "Mishpatim"
 msgstr "משפטים"
 
-#: hcal/hcal_stings.py:149
+#: hcal/hcal_strings.py:149
 msgid "Terumah"
 msgstr "תרומה"
 
-#: hcal/hcal_stings.py:150
+#: hcal/hcal_strings.py:150
 msgid "Tetzaveh"
 msgstr "תצווה"
 
-#: hcal/hcal_stings.py:151
+#: hcal/hcal_strings.py:151
 msgid "Ki Tisa"
 msgstr "כי תשא"
 
-#: hcal/hcal_stings.py:152
+#: hcal/hcal_strings.py:152
 msgid "Vayakhel"
 msgstr "ויקהל"
 
-#: hcal/hcal_stings.py:153
+#: hcal/hcal_strings.py:153
 msgid "Pekudei"
 msgstr "פקודי"
 
-#: hcal/hcal_stings.py:154
+#: hcal/hcal_strings.py:154
 msgid "Vayikra"
 msgstr "ויקרא"
 
-#: hcal/hcal_stings.py:155
+#: hcal/hcal_strings.py:155
 msgid "Tzav"
 msgstr "צו"
 
-#: hcal/hcal_stings.py:156
+#: hcal/hcal_strings.py:156
 msgid "Shmini"
 msgstr "שמיני"
 
-#: hcal/hcal_stings.py:157
+#: hcal/hcal_strings.py:157
 msgid "Tazria"
 msgstr "תזריע"
 
-#: hcal/hcal_stings.py:158
+#: hcal/hcal_strings.py:158
 msgid "Metzora"
 msgstr "מצורע"
 
-#: hcal/hcal_stings.py:159
+#: hcal/hcal_strings.py:159
 msgid "Achrei Mot"
 msgstr "אחרי מות"
 
-#: hcal/hcal_stings.py:160
+#: hcal/hcal_strings.py:160
 msgid "Kedoshim"
 msgstr "קדושים"
 
-#: hcal/hcal_stings.py:161
+#: hcal/hcal_strings.py:161
 msgid "Emor"
 msgstr "אמור"
 
-#: hcal/hcal_stings.py:162
+#: hcal/hcal_strings.py:162
 msgid "Behar"
 msgstr "בהר"
 
-#: hcal/hcal_stings.py:163
+#: hcal/hcal_strings.py:163
 msgid "Bechukotai"
 msgstr "בחוקותי"
 
-#: hcal/hcal_stings.py:164
+#: hcal/hcal_strings.py:164
 msgid "Bamidbar"
 msgstr "במדבר"
 
-#: hcal/hcal_stings.py:165
+#: hcal/hcal_strings.py:165
 msgid "Nasso"
 msgstr "נשא"
 
-#: hcal/hcal_stings.py:166
+#: hcal/hcal_strings.py:166
 msgid "Beha'alotcha"
 msgstr "בהעלותך"
 
-#: hcal/hcal_stings.py:167
+#: hcal/hcal_strings.py:167
 msgid "Sh'lach"
 msgstr "שלח"
 
-#: hcal/hcal_stings.py:168
+#: hcal/hcal_strings.py:168
 msgid "Korach"
 msgstr "קרח"
 
-#: hcal/hcal_stings.py:169
+#: hcal/hcal_strings.py:169
 msgid "Chukat"
 msgstr "חוקת"
 
-#: hcal/hcal_stings.py:170
+#: hcal/hcal_strings.py:170
 msgid "Balak"
 msgstr "בלק"
 
-#: hcal/hcal_stings.py:171
+#: hcal/hcal_strings.py:171
 msgid "Pinchas"
 msgstr "פינחס"
 
-#: hcal/hcal_stings.py:172
+#: hcal/hcal_strings.py:172
 msgid "Matot"
 msgstr "מטות"
 
-#: hcal/hcal_stings.py:173
+#: hcal/hcal_strings.py:173
 msgid "Masei"
 msgstr "מסעי"
 
-#: hcal/hcal_stings.py:174
+#: hcal/hcal_strings.py:174
 msgid "Devarim"
 msgstr "דברים"
 
-#: hcal/hcal_stings.py:175
+#: hcal/hcal_strings.py:175
 msgid "Vaetchanan"
 msgstr "ואתחנן"
 
-#: hcal/hcal_stings.py:176
+#: hcal/hcal_strings.py:176
 msgid "Eikev"
 msgstr "עקב"
 
-#: hcal/hcal_stings.py:177
+#: hcal/hcal_strings.py:177
 msgid "Re'eh"
 msgstr "ראה"
 
-#: hcal/hcal_stings.py:178
+#: hcal/hcal_strings.py:178
 msgid "Shoftim"
 msgstr "שופטים"
 
-#: hcal/hcal_stings.py:179
+#: hcal/hcal_strings.py:179
 msgid "Ki Teitzei"
 msgstr "כי תצא"
 
-#: hcal/hcal_stings.py:180
+#: hcal/hcal_strings.py:180
 msgid "Ki Tavo"
 msgstr "כי תבוא"
 
-#: hcal/hcal_stings.py:181
+#: hcal/hcal_strings.py:181
 msgid "Nitzavim"
 msgstr "נצבים"
 
-#: hcal/hcal_stings.py:182
+#: hcal/hcal_strings.py:182
 msgid "Vayeilech"
 msgstr "וילך"
 
-#: hcal/hcal_stings.py:183
+#: hcal/hcal_strings.py:183
 msgid "Ha'Azinu"
 msgstr "האזינו"
 
-#: hcal/hcal_stings.py:184
+#: hcal/hcal_strings.py:184
 msgid "Vezot Habracha"
 msgstr "וזאת הברכה"
 
-#: hcal/hcal_stings.py:185
+#: hcal/hcal_strings.py:185
 msgid "Vayakhel-Pekudei"
 msgstr "ויקהל פקודי"
 
-#: hcal/hcal_stings.py:186
+#: hcal/hcal_strings.py:186
 msgid "Tazria-Metzora"
 msgstr "תזריע מצורע"
 
-#: hcal/hcal_stings.py:187
+#: hcal/hcal_strings.py:187
 msgid "Achrei Mot-Kedoshim"
 msgstr "אחרי מות קדושים"
 
-#: hcal/hcal_stings.py:188
+#: hcal/hcal_strings.py:188
 msgid "Behar-Bechukotai"
 msgstr "בהר בחוקותי"
 
-#: hcal/hcal_stings.py:189
+#: hcal/hcal_strings.py:189
 msgid "Chukat-Balak"
 msgstr "חוקת בלק"
 
-#: hcal/hcal_stings.py:190
+#: hcal/hcal_strings.py:190
 msgid "Matot-Masei"
 msgstr "מטות מסעי"
 
-#: hcal/hcal_stings.py:191
+#: hcal/hcal_strings.py:191
 msgid "Nitzavim-Vayeilech"
 msgstr "נצבים וילך"
 
-#: hcal/hcal_stings.py:192
+#: hcal/hcal_strings.py:192
 msgid "translator"
 msgstr "יעקב זמיר"
 
@@ -698,47 +698,55 @@ msgstr "שנת שלום ואהבה"
 msgid "Year of happiness"
 msgstr "שנת אושר"
 
-#: hcal/templates/weekly.html:18 hcal/templates/weekly.html.py:19
-#: hcal/templates/weekly.html:20
+#: hcal/templates/weekly.html:18
+msgid "year length"
+msgstr "אורכה"
+
+#: hcal/templates/weekly.html:18
+msgid "days"
+msgstr "ימים"
+
+#: hcal/templates/weekly.html:19 hcal/templates/weekly.html.py:20
+#: hcal/templates/weekly.html:21
 msgid "year"
 msgstr "שנת"
 
-#: hcal/templates/weekly.html:18
+#: hcal/templates/weekly.html:19
 msgid "for the state of Israel"
 msgstr "למדינת ישראל"
 
-#: hcal/templates/weekly.html:19
+#: hcal/templates/weekly.html:20
 msgid "for the unification of Jerusalem"
 msgstr "לאיחוד ירושלים"
 
-#: hcal/templates/weekly.html:20
+#: hcal/templates/weekly.html:21
 msgid "for the fall of Jerusalem"
 msgstr "לחורבן ביהמ\"ק"
 
-#: hcal/templates/weekly.html:53
+#: hcal/templates/weekly.html:54
 msgid "Sunrise"
 msgstr "זריחה"
 
-#: hcal/templates/weekly.html:55
+#: hcal/templates/weekly.html:56
 msgid "Sunset"
 msgstr "שקיעה"
 
-#: hcal/templates/weekly.html:61
+#: hcal/templates/weekly.html:62
 msgid "first day in month"
 msgstr "ראש חודש"
 
-#: hcal/templates/weekly.html:64
+#: hcal/templates/weekly.html:65
 msgid "on the omer"
 msgstr "לעומר"
 
-#: hcal/templates/weekly.html:76 hcal/templates/weekly.html.py:78
+#: hcal/templates/weekly.html:77 hcal/templates/weekly.html.py:79
 msgid "Candle light"
 msgstr "ה\"נ"
 
-#: hcal/templates/weekly.html:80
+#: hcal/templates/weekly.html:81
 msgid "Shabat ends "
 msgstr "מוצ\"ש"
 
-#: hcal/templates/weekly.html:82
+#: hcal/templates/weekly.html:83
 msgid "Hag ends "
 msgstr "מוצ\"ח"

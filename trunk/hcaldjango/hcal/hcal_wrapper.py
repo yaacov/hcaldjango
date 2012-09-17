@@ -147,6 +147,8 @@ class HcalWrapper(Hdate):
         # libhdate 1.6 - 1.8 python bindings 
         # have a bug with day of the week strings
         day_strings = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        day_strings_short = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+        day_of_the_week = self.get_day_of_the_week()
         
         # get Gregorian date
         # day_fo_week - 1 .. 7 => Sunday .. Saturday
@@ -155,8 +157,9 @@ class HcalWrapper(Hdate):
             'month' : self.get_gmonth(),
             'month_str' : self.get_month_string(False), 
             'year' : self.get_gyear(), 
-            'day_of_week' : self.get_day_of_the_week(),
-            'day_of_week_str' : _(day_strings[self.get_day_of_the_week() - 1]),}
+            'day_of_week' : day_of_the_week,
+            'day_of_week_short_str' : _(day_strings_short[day_of_the_week - 1]),
+            'day_of_week_str' : _(day_strings[day_of_the_week - 1]),}
         
         # get Hebrew date
         output['hdate'] = {
@@ -261,28 +264,28 @@ class HcalWrapper(Hdate):
         # get the week's header
         header = {}
         
-        # check if this week spans two Gregorian years 
+        # check if this days spans two Gregorian years 
         if days[0]['gdate']['year'] == days[-1]['gdate']['year']:
            header['gyear'] = "%d" % days[0]['gdate']['year']
         else:
             header['gyear'] = "%d-%d" % (
                 days[0]['gdate']['year'], days[-1]['gdate']['year'])
         
-        # check if this week spans two Gregorian months 
+        # check if this days spans two Gregorian months 
         if days[0]['gdate']['month'] == days[-1]['gdate']['month']:
            header['gmonth'] = days[0]['gdate']['month_str']
         else:
             header['gmonth'] = "%s-%s" % (
                 days[0]['gdate']['month_str'], days[-1]['gdate']['month_str'])
         
-        # check if this week spans two Hebrew years 
+        # check if this days spans two Hebrew years 
         if days[0]['hdate']['year'] == days[-1]['hdate']['year']:
            header['hyear'] = "%s" % days[0]['hdate']['year']
         else:
             header['hyear'] = "%s-%s" % (
                 days[0]['hdate']['year'], days[-1]['hdate']['year'])
         
-        # check if this week spans two Hebrew months 
+        # check if this days spans two Hebrew months 
         if days[0]['hdate']['month'] == days[-1]['hdate']['month']:
            header['hmonth'] = days[0]['hdate']['month_str']
         else:
