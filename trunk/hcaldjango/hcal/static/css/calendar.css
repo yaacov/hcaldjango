@@ -144,7 +144,7 @@ body {
   color: black;
 }
 .calendar-week .day-c .line2 {
-  color: gray;
+  color: red;
 }
 .calendar-week .day-d {
   width: 15mm;
