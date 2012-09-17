@@ -25,15 +25,12 @@ from django.utils import translation
 from django.utils.translation import ugettext as _
 
 from hcal_wrapper import HcalWrapper
-    
-def index(request, hyear = 5773, theme = 'images'):
-    ''' render a calendar for a year
-    
-        hyear - the Hebrew year to render 
-            (e.g. Hebrew 5773 is Gregorian 2012-2013)
+
+def create_calendar_object(hyear = 5773):
+    ''' create the libhdate calendar object
+        and set it's location and time zone
     '''
     
-    hyear = int(hyear)
     hcal = HcalWrapper()
     
     # time calculations use the location
@@ -62,9 +59,14 @@ def index(request, hyear = 5773, theme = 'images'):
     hcal.set_israel ()
     #set_diaspora ()
     
-    # get Julian for year start
-    hcal.set_hdate(1, 1, hyear)
-    jd_1_tishrey = hcal.get_julian()
+    return hcal
+    
+def get_calendar_header(hyear = 5773):
+    ''' create a header dictionary useful for
+        renedring the calendar first page
+    '''
+    
+    hcal = HcalWrapper()
     
     # get header for year calendar,
     #   calculate Gregorian year for 5 be Iyaar)
@@ -87,6 +89,26 @@ def index(request, hyear = 5773, theme = 'images'):
         'hebrew_year_length' : hyear_length
     }
     
+    return header
+    
+def weekly(request, hyear = 5773, theme = 'images'):
+    ''' render a weekly calendar for a year
+    
+        hyear - the Hebrew year to render 
+            (e.g. Hebrew 5773 is Gregorian 2012-2013)
+    '''
+    
+    hyear = int(hyear)
+    hcal = create_calendar_object(hyear)
+    
+    # get Julian for year start
+    hcal.set_hdate(1, 1, hyear)
+    jd_1_tishrey = hcal.get_julian()
+    hyear_length = hcal.get_size_of_year()
+    
+    # set the dictionary data for rendering the first page
+    header = get_calendar_header(hyear)
+    
     # get the weeks in this year's calendar
     weeks = []
     for i in range(0, hyear_length + 7, 7):
@@ -95,8 +117,8 @@ def index(request, hyear = 5773, theme = 'images'):
         days = hcal.week_to_dict()
         
         # add an image for this week header
-        image = hcal.get_weeks()
-        days['header']['image'] = '/static/%s/%d.png' % (theme, image % 20 + 1)
+        image_number = hcal.get_weeks()
+        days['header']['image'] = '/static/%s/%d.png' % (theme, image_number % 20 + 1)
         
         weeks.append(days)
     

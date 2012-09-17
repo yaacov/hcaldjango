@@ -237,6 +237,15 @@ class HcalWrapper(Hdate):
         
         return self._days_to_dict(7)
     
+    def biweek_to_dict(self):
+        ''' creates a dictionary for printing two weeks
+            in the calendar, it has a header and 14 days
+            
+            Notice: this function changes the date of this object
+        '''
+        
+        return self._days_to_dict(14)
+    
     def month_to_dict(self):
         ''' creates a dictionary for printing a month
             in the calendar, it has a header and 7 * 6 days

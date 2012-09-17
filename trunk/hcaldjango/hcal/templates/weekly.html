@@ -51,12 +51,13 @@
                 {{ day.gdate.day }}
             </td>
             <td class="day-b">
-                {% trans 'Sunrise' %}<br/>
-                {{ day.times.sunrise }}<br/>
-                {% trans 'Sunset' %}<br/>
-                {{ day.times.sunset }}<br/>
+                <span class="line1">{% trans 'Sunrise' %}</span><br/>
+                <span class="line2">{{ day.times.sunrise }}</span><br/>
+                <span class="line3">{% trans 'Sunset' %}</span><br/>
+                <span class="line4">{{ day.times.sunset }}</span><br/>
             </td>
             <td class="day-c">
+                <span class="line1">
                 {{ day.gdate.day_of_week_str }}
                 {% if day.hdate.day_num == 1%}
                     - {% trans "first day in month" %} {{ day.hdate.month_str }}
@@ -64,16 +65,18 @@
                 {% if day.omer.is_omer %}
                     - {{ day.omer.number }} {% trans "on the omer" %}
                 {% endif %}
-                <br/>
+                </span><br/>
+                <span class="line2">
                 {% if day.holiday.type != 0 %}
                     {{ day.holiday.title }}
                 {% endif %}
+                </span><br/>
+                <span class="line3">
                 {% if day.parasha.is_parasha %}
                     {{ day.parasha.title }}
                 {% endif %}
-                <br/>
-                <br/>
-                {% if day.gdate.day_of_week == 6 %}
+                </span><br/>
+                <span class="line4">{% if day.gdate.day_of_week == 6 %}
                     {% trans 'Candle light' %} {{ day.times.candlelight }}
                 {% elif day.is_erev_hag and not day.is_hag %}
                     {% trans 'Candle light' %} {{ day.times.candlelight }}
@@ -82,7 +85,7 @@
                 {% elif day.is_hag and not day.is_erev_hag %}
                     {% trans 'Hag ends ' %} {{ day.times.three_stars }}
                 {% endif %}
-                <br/>
+                </span><br/>
             </td>
             <td class="day-d">
               {{ day.hdate.day }}

@@ -5,9 +5,8 @@ from django.conf.urls import patterns, include, url
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', 'hcal.views.index'),
-    url(r'^(?P<theme>\w+)/$', 'hcal.views.index'),
-    url(r'^(?P<theme>\w+)/(?P<hyear>\d+)/$', 'hcal.views.index'),
+    url(r'^$', 'hcal.views.weekly'),
+    url(r'^hcal/', include('hcal.urls')),
     
     # Examples:
     # url(r'^$', 'hcaldjango.views.home', name='home'),

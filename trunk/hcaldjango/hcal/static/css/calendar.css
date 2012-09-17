@@ -81,6 +81,17 @@ body {
   width: 165mm;
   color: gray;
 }
+.calendar-week.left table {
+  width: 80mm;
+  color: gray;
+  float: left;
+}
+.calendar-week.right table {
+  width: 80mm;
+  color: gray;
+  float: right;
+}
+
 .calendar-week table td {
   border-top: 1px solid lightgray;
 }
@@ -109,6 +120,9 @@ body {
 .calendar-week .shabat {
   color: red;
 }
+.calendar-week .shabat .day-c .line1{
+  color: red;
+}
 
 .calendar-week .day-a {
   width: 15mm;
@@ -125,6 +139,12 @@ body {
   color: gray;
   text-align: right;
   vertical-align: top;
+}
+.calendar-week .day-c .line1 {
+  color: black;
+}
+.calendar-week .day-c .line2 {
+  color: gray;
 }
 .calendar-week .day-d {
   width: 15mm;
