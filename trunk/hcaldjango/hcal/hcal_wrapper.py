@@ -209,6 +209,8 @@ class HcalWrapper(Hdate):
             day_clases.append('tzom')
         if output['holiday']['type'] in [3, 4]:
             day_clases.append('chol_hamoed')
+        if output['holiday']['type'] in [6, 7, 8, 9]:
+            day_clases.append('hag')
         if output['gdate']['day_of_week'] == 6:
             day_clases.append('shishi')
         if output['gdate']['day_of_week'] == 7:

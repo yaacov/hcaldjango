@@ -98,6 +98,9 @@ body {
 .calendar-week .chol_hamoed {
   color: black;
 }
+.calendar-week .hag {
+  color: black;
+}
 .calendar-week .tzom {
   color: black;
 }
