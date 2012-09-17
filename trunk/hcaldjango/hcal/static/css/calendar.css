@@ -1,7 +1,7 @@
 /* calendar main body */
 body {
   background: white;
-  
+  background-image: url(/static/backgrounds/paper.jpg);
   font-size: 12px;
   font-family: arial,sans-serif;
 }

@@ -26,7 +26,7 @@ from django.utils.translation import ugettext as _
 
 from hcal_wrapper import HcalWrapper
     
-def index(request, hyear = 5773):
+def index(request, hyear = 5773, theme = 'images'):
     ''' render a calendar for a year
     
         hyear - the Hebrew year to render 
@@ -96,7 +96,7 @@ def index(request, hyear = 5773):
         
         # add an image for this week header
         image = hcal.get_weeks()
-        days['header']['image'] = '/static/images/%d.png' % (image % 10 + 1)
+        days['header']['image'] = '/static/%s/%d.png' % (theme, image % 10 + 1)
         
         weeks.append(days)
     

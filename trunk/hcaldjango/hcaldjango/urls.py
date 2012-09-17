@@ -6,8 +6,8 @@ from django.conf.urls import patterns, include, url
 
 urlpatterns = patterns('',
     url(r'^$', 'hcal.views.index'),
-    url(r'^hcal/$', 'hcal.views.index'),
-    url(r'^hcal/(?P<hyear>\d+)/$', 'hcal.views.index'),
+    url(r'^(?P<theme>\w+)/$', 'hcal.views.index'),
+    url(r'^(?P<theme>\w+)/(?P<hyear>\d+)/$', 'hcal.views.index'),
     
     # Examples:
     # url(r'^$', 'hcaldjango.views.home', name='home'),
