@@ -135,6 +135,32 @@ class HcalWrapper(Hdate):
         
         return "%02d:%02d" % (hour, minute)
     
+    def get_chanuka_number(self):
+        ''' gets the candle number for chanuka
+        '''
+        
+        # check for chanuka
+        holiday = self.get_holyday()
+        
+        # if not chanuka return
+        if holiday != 9:
+            return 0
+        
+        # get this julian
+        jd = self.get_julian()
+        
+        # get julian for first of chanuka
+        self.set_hdate(25, 3, self.get_hyear())
+        jd_1_chanuka = self.get_julian()
+        
+        # calculate the chanuka number
+        chanuka_number = self.int_to_str(jd - jd_1_chanuka + 1)
+        
+        # return self to it's original date
+        self.set_jd(jd)
+        
+        return chanuka_number
+        
     def date_to_dict(self):
         ''' converts the date to a dictionary, with information
             useful for printing the date in a calendar
@@ -218,12 +244,16 @@ class HcalWrapper(Hdate):
         
         output['class'] = " ".join(day_clases)
         
+        # check for chanuka candel number
+        output['chanuka'] = self.get_chanuka_number()
+        
         # check for hag
         output['is_hag'] = (self.get_holyday_type() == 1)
         
         # check for erev hag
         jd = self.get_julian()
         self.set_jd(jd + 1)
+        
         output['is_erev_hag'] = (self.get_holyday_type() == 1)
         
         return output

@@ -59,7 +59,7 @@
             <td class="day-c">
                 <span class="line1">
                 {{ day.gdate.day_of_week_str }}
-                {% if day.hdate.day_num == 1%}
+                {% if day.hdate.day_num == 1 %}
                     - {% trans "first day in month" %} {{ day.hdate.month_str }}
                 {% endif %}
                 {% if day.omer.is_omer %}
@@ -67,6 +67,9 @@
                 {% endif %}
                 </span><br/>
                 <span class="line2">
+                {% if day.chanuka %}
+                    {{ day.chanuka }}
+                {% endif %}
                 {% if day.holiday.type != 0 %}
                     {{ day.holiday.title }}
                 {% endif %}
