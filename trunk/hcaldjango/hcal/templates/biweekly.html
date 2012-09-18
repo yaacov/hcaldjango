@@ -8,6 +8,18 @@
 </head>
 <body>
 
+{% if weeks %}
+<div class="links">
+<ul>
+{% for week in weeks %}
+    {% if week.header.link.0 != "" %}
+    <li><a href="#{{ week.header.link.0 }}">{{ week.header.link.1 }}</a></li>
+    {% endif%}
+{% endfor %}
+</ul>
+</div>
+{% endif %}
+
 <div class="page first">
     <div class="placeholeder"></div>
     <h1 class="hyear">{{ header.hyear }}</h1>
@@ -31,7 +43,7 @@
         <table>
           <tr>
             <td class="month month-a">
-                <a name="{{ week.header.link }}">{{ week.header.gmonth }}</a>
+                <a name="{{ week.header.link.0 }}">{{ week.header.gmonth }}</a>
             </td>
             <td class="month month-b">{{ week.header.hmonth }}</td>
           </tr>
@@ -43,7 +55,6 @@
           </tr>
         </table>
     </div>
-    {{ week.header.link }}
     
     {% if week.days %}
     <div class="calendar-week right">

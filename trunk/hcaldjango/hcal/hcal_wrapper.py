@@ -293,6 +293,7 @@ class HcalWrapper(Hdate):
         '''
         
         header_link = ""
+        header_link_title = ""
         
         # get the Julian for Sunday
         dow = self.get_day_of_the_week() - 1
@@ -310,6 +311,9 @@ class HcalWrapper(Hdate):
             if date_dict['gdate']['day'] == 1:
                 header_link = "01-%02d-%04d" % (
                     date_dict['gdate']['month'], 
+                    date_dict['gdate']['year'])
+                header_link_title = "%s %04d" % (
+                    date_dict['gdate']['month_str'], 
                     date_dict['gdate']['year'])
         
         # get the week's header
@@ -344,7 +348,7 @@ class HcalWrapper(Hdate):
                 days[0]['hdate']['month_str'], days[-1]['hdate']['month_str'])
         
         # add a link to the day span
-        header['link'] = header_link
+        header['link'] = (header_link, header_link_title)
         
         return {'header' : header, 'days' : days}
 

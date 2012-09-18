@@ -3,6 +3,10 @@ body {
   background: white;
 }
 
+.links {
+    visibility: hidden;
+}
+
 /* page for printing a calendar
    A4 - page size 210mm x 297mm */
 .page {
