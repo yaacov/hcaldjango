@@ -26,7 +26,7 @@ from django.utils.translation import ugettext as _
 
 from hcal_wrapper import HcalWrapper
 
-def create_calendar_object(hyear = 5773):
+def create_calendar_object(hyear):
     ''' create the libhdate calendar object
         and set it's location and time zone
     '''
@@ -61,7 +61,7 @@ def create_calendar_object(hyear = 5773):
     
     return hcal
     
-def get_calendar_header(hyear = 5773):
+def get_calendar_header(hyear):
     ''' create a header dictionary useful for
         renedring the calendar first page
     '''
@@ -90,6 +90,22 @@ def get_calendar_header(hyear = 5773):
     }
     
     return header
+
+def get_year_start(hyear):
+    ''' calculate the year's julian and length
+    
+        return: a tupple of the julian number for 1'st of Tishrey
+                and the length of the year
+    '''
+    
+    hcal = HcalWrapper()
+    
+    # get Julian for year start
+    hcal.set_hdate(1, 1, hyear)
+    jd_1_tishrey = hcal.get_julian()
+    hyear_length = hcal.get_size_of_year()
+    
+    return (jd_1_tishrey, hyear_length)
     
 def weekly(request, hyear = 5773, theme = 'images', page = 'biweekly'):
     ''' render a weekly calendar for a year
@@ -103,26 +119,28 @@ def weekly(request, hyear = 5773, theme = 'images', page = 'biweekly'):
     
     # chose type of renderer and template
     if page == 'weekly':
+        # set the renderer theme and template to render
+        # one week per page
+        
         template = 'weekly.html'
         number_of_days_per_page = 7
         days_function = hcal.week_to_dict
-    elif page == 'biweekly':
-        template = 'biweekly.html'
-        number_of_days_per_page = 14
-        days_function = hcal.biweek_to_dict
+        image_function = hcal.get_weeks
     else:
-        # fall back to biweekly view
+        # fall back to biweekly view -
+        # set the renderer theme and template to render
+        # two weeks per page
+        
         template = 'biweekly.html'
         number_of_days_per_page = 14
         days_function = hcal.biweek_to_dict
-    
-    # get Julian for year start
-    hcal.set_hdate(1, 1, hyear)
-    jd_1_tishrey = hcal.get_julian()
-    hyear_length = hcal.get_size_of_year()
+        image_function = lambda: int(hcal.get_weeks() / 2)
     
     # set the dictionary data for rendering the first page
     header = get_calendar_header(hyear)
+    
+    # get Julian for year start
+    jd_1_tishrey, hyear_length = get_year_start(hyear)
     
     # get the weeks in this year's calendar
     weeks = []
@@ -132,7 +150,7 @@ def weekly(request, hyear = 5773, theme = 'images', page = 'biweekly'):
         days = days_function()
         
         # add an image for this week header
-        image_number = hcal.get_weeks()
+        image_number = image_function()
         days['header']['image'] = '/static/%s/%d.png' % (theme, image_number % 20 + 1)
         
         weeks.append(days)

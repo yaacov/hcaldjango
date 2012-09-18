@@ -5,6 +5,10 @@ body {
   font-size: 12px;
   font-family: arial,sans-serif;
 }
+a:link {text-decoration: none}
+a:visited {text-decoration: none}
+a:active {text-decoration: none}
+a:hover {text-decoration: none}
 
 /* page for printing a calendar
    A4 - page size 210mm x 297mm */

@@ -292,6 +292,8 @@ class HcalWrapper(Hdate):
             Notice: this function changes the date of this object
         '''
         
+        header_link = ""
+        
         # get the Julian for Sunday
         dow = self.get_day_of_the_week() - 1
         jd = self.get_julian() - dow
@@ -300,7 +302,15 @@ class HcalWrapper(Hdate):
         days = []
         for i in range(jd, jd + number_of_days):
             self.set_jd(i)
-            days.append(self.date_to_dict())
+            date_dict = self.date_to_dict()
+            days.append(date_dict)
+            
+            # check for 1'st of Gregorian month
+            # and add a link to the day span header
+            if date_dict['gdate']['day'] == 1:
+                header_link = "01-%02d-%04d" % (
+                    date_dict['gdate']['month'], 
+                    date_dict['gdate']['year'])
         
         # get the week's header
         header = {}
@@ -309,29 +319,32 @@ class HcalWrapper(Hdate):
         if days[0]['gdate']['year'] == days[-1]['gdate']['year']:
            header['gyear'] = "%d" % days[0]['gdate']['year']
         else:
-            header['gyear'] = "%d-%d" % (
+           header['gyear'] = "%d-%d" % (
                 days[0]['gdate']['year'], days[-1]['gdate']['year'])
         
         # check if this days spans two Gregorian months 
         if days[0]['gdate']['month'] == days[-1]['gdate']['month']:
            header['gmonth'] = days[0]['gdate']['month_str']
         else:
-            header['gmonth'] = "%s-%s" % (
+           header['gmonth'] = "%s-%s" % (
                 days[0]['gdate']['month_str'], days[-1]['gdate']['month_str'])
         
         # check if this days spans two Hebrew years 
         if days[0]['hdate']['year'] == days[-1]['hdate']['year']:
            header['hyear'] = "%s" % days[0]['hdate']['year']
         else:
-            header['hyear'] = "%s-%s" % (
+           header['hyear'] = "%s-%s" % (
                 days[0]['hdate']['year'], days[-1]['hdate']['year'])
         
         # check if this days spans two Hebrew months 
         if days[0]['hdate']['month'] == days[-1]['hdate']['month']:
            header['hmonth'] = days[0]['hdate']['month_str']
         else:
-            header['hmonth'] = "%s-%s" % (
+           header['hmonth'] = "%s-%s" % (
                 days[0]['hdate']['month_str'], days[-1]['hdate']['month_str'])
-                
+        
+        # add a link to the day span
+        header['link'] = header_link
+        
         return {'header' : header, 'days' : days}
 

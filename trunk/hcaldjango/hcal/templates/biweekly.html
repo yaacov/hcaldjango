@@ -30,7 +30,9 @@
         <img src="{{ week.header.image }}" />
         <table>
           <tr>
-            <td class="month month-a">{{ week.header.gmonth }}</td>
+            <td class="month month-a">
+                <a name="{{ week.header.link }}">{{ week.header.gmonth }}</a>
+            </td>
             <td class="month month-b">{{ week.header.hmonth }}</td>
           </tr>
         </table>
@@ -41,7 +43,8 @@
           </tr>
         </table>
     </div>
-
+    {{ week.header.link }}
+    
     {% if week.days %}
     <div class="calendar-week right">
     <table>
