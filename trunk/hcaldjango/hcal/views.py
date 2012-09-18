@@ -91,7 +91,7 @@ def get_calendar_header(hyear = 5773):
     
     return header
     
-def weekly(request, hyear = 5773, theme = 'images', page = 'weekly'):
+def weekly(request, hyear = 5773, theme = 'images', page = 'biweekly'):
     ''' render a weekly calendar for a year
     
         hyear - the Hebrew year to render 
