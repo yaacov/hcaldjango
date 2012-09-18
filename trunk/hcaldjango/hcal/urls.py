@@ -6,9 +6,9 @@ from django.conf.urls import patterns, include, url
 
 urlpatterns = patterns('',
     url(r'^$', 'hcal.views.weekly'),
-    url(r'^weekly/$', 'hcal.views.weekly'),
-    url(r'^weekly/(?P<theme>\w+)/$', 'hcal.views.weekly'),
-    url(r'^weekly/(?P<theme>\w+)/(?P<hyear>\w+)/$', 'hcal.views.weekly'),
+    url(r'^(?P<page>\w+)/$', 'hcal.views.weekly'),
+    url(r'^(?P<page>\w+)/(?P<theme>\w+)/$', 'hcal.views.weekly'),
+    url(r'^(?P<page>\w+)/(?P<theme>\w+)/(?P<hyear>\w+)/$', 'hcal.views.weekly'),
     
     # Examples:
     # url(r'^$', 'hcaldjango.views.home', name='home'),

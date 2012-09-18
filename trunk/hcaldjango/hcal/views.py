@@ -91,7 +91,7 @@ def get_calendar_header(hyear = 5773):
     
     return header
     
-def weekly(request, hyear = 5773, theme = 'images'):
+def weekly(request, hyear = 5773, theme = 'images', page = 'weekly'):
     ''' render a weekly calendar for a year
     
         hyear - the Hebrew year to render 
@@ -100,6 +100,21 @@ def weekly(request, hyear = 5773, theme = 'images'):
     
     hyear = int(hyear)
     hcal = create_calendar_object(hyear)
+    
+    # chose type of renderer and template
+    if page == 'weekly':
+        template = 'weekly.html'
+        number_of_days_per_page = 7
+        days_function = hcal.week_to_dict
+    elif page == 'biweekly':
+        template = 'biweekly.html'
+        number_of_days_per_page = 14
+        days_function = hcal.biweek_to_dict
+    else:
+        # fall back to biweekly view
+        template = 'biweekly.html'
+        number_of_days_per_page = 14
+        days_function = hcal.biweek_to_dict
     
     # get Julian for year start
     hcal.set_hdate(1, 1, hyear)
@@ -111,10 +126,10 @@ def weekly(request, hyear = 5773, theme = 'images'):
     
     # get the weeks in this year's calendar
     weeks = []
-    for i in range(0, hyear_length + 7, 7):
+    for i in range(0, hyear_length + 7, number_of_days_per_page):
         # move calendar to the printing week
         hcal.set_jd(jd_1_tishrey + i)
-        days = hcal.week_to_dict()
+        days = days_function()
         
         # add an image for this week header
         image_number = hcal.get_weeks()
@@ -123,7 +138,7 @@ def weekly(request, hyear = 5773, theme = 'images'):
         weeks.append(days)
     
     # render the calendar
-    t = loader.get_template('weekly.html')
+    t = loader.get_template(template)
     c = Context({
         'header' : header,
         'weeks' : weeks,

@@ -1,0 +1,163 @@
+{% load i18n %} 
+<html>
+<head>
+<title>calendar</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" media="all" href="/static/css/calendar.css" />
+<link rel="stylesheet" type="text/css" media="print" href="/static/css/print.css" />
+</head>
+<body>
+
+<div class="page first">
+    <div class="placeholeder"></div>
+    <h1 class="hyear">{{ header.hyear }}</h1>
+    <h1 class="gyear">{{ header.gyear }}</h1>
+    <h1>{% trans "Happy and blessed year" %}</h1>
+    <h1>{% trans "Year of peace and love" %}</h1>
+    <h1>{% trans "Year of happiness" %}</h1>
+    <div class="placeholeder"></div>
+    <p>{% trans "year length" %} {{ header.hebrew_year_length }} {% trans "days" %}</p>
+    <p>{% trans "year" %} {{ header.israel }} {% trans "for the state of Israel" %}</p>
+    <p>{% trans "year" %} {{ header.jerusalem }} {% trans "for the unification of Jerusalem" %}</p>
+    <p>{% trans "year" %} {{ header.mered_gadol }} {% trans "for the fall of Jerusalem" %}</p>
+</div>
+
+{% if weeks %}
+{% for week in weeks %}
+<div class="page">
+
+    <div class="header">
+        <img src="{{ week.header.image }}" />
+        <table>
+          <tr>
+            <td class="month month-a">{{ week.header.gmonth }}</td>
+            <td class="month month-b">{{ week.header.hmonth }}</td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td class="year year-a">{{ week.header.gyear }}</td>
+            <td class="year year-b">{{ week.header.hyear }}</td>
+          </tr>
+        </table>
+    </div>
+
+    {% if week.days %}
+    <div class="calendar-week right">
+    <table>
+        
+        {% for day in week.days|slice:":7" %}
+        <tr class="day {{ day.class }}">
+            <td class="day-b">
+                <span class="line1">{% trans 'Sunrise' %}</span><br/>
+                <span class="line2">{{ day.times.sunrise }}</span><br/>
+                <span class="line3">{% trans 'Sunset' %}</span><br/>
+                <span class="line4">{{ day.times.sunset }}</span><br/>
+            </td>
+            <td class="day-c">
+                <span class="line1">
+                {{ day.gdate.day_of_week_str }}
+                {% if day.hdate.day_num == 1 %}
+                    - {% trans "first day in month" %} {{ day.hdate.month_str }}
+                {% endif %}
+                {% if day.omer.is_omer %}
+                    - {{ day.omer.number }} {% trans "on the omer" %}
+                {% endif %}
+                </span><br/>
+                <span class="line2">
+                {% if day.chanuka %}
+                    {{ day.chanuka }}
+                {% endif %}
+                {% if day.holiday.type != 0 %}
+                    {{ day.holiday.title }}
+                {% endif %}
+                </span><br/>
+                <span class="line3">
+                {% if day.parasha.is_parasha %}
+                    {{ day.parasha.title }}
+                {% endif %}
+                </span><br/>
+                <span class="line4">{% if day.gdate.day_of_week == 6 %}
+                    {% trans 'Candle light' %} {{ day.times.candlelight }}
+                {% elif day.is_erev_hag and not day.is_hag %}
+                    {% trans 'Candle light' %} {{ day.times.candlelight }}
+                {% elif day.gdate.day_of_week == 7 %}
+                    {% trans 'Shabat ends ' %} {{ day.times.three_stars }}
+                {% elif day.is_hag and not day.is_erev_hag %}
+                    {% trans 'Hag ends ' %} {{ day.times.three_stars }}
+                {% endif %}
+                </span><br/>
+            </td>
+            <td class="day-d">
+              {{ day.hdate.day }} <br/> {{ day.gdate.day }}
+            </td>
+        </tr>
+        {% endfor %}
+        
+    </table>
+    </div>
+    
+    <div class="calendar-week left">
+    <table>
+        
+        {% for day in week.days|slice:"7:14" %}
+        <tr class="day {{ day.class }}">
+            <td class="day-b">
+                <span class="line1">{% trans 'Sunrise' %}</span><br/>
+                <span class="line2">{{ day.times.sunrise }}</span><br/>
+                <span class="line3">{% trans 'Sunset' %}</span><br/>
+                <span class="line4">{{ day.times.sunset }}</span><br/>
+            </td>
+            <td class="day-c">
+                <span class="line1">
+                {{ day.gdate.day_of_week_str }}
+                {% if day.hdate.day_num == 1 %}
+                    - {% trans "first day in month" %} {{ day.hdate.month_str }}
+                {% endif %}
+                {% if day.omer.is_omer %}
+                    - {{ day.omer.number }} {% trans "on the omer" %}
+                {% endif %}
+                </span><br/>
+                <span class="line2">
+                {% if day.chanuka %}
+                    {{ day.chanuka }}
+                {% endif %}
+                {% if day.holiday.type != 0 %}
+                    {{ day.holiday.title }}
+                {% endif %}
+                </span><br/>
+                <span class="line3">
+                {% if day.parasha.is_parasha %}
+                    {{ day.parasha.title }}
+                {% endif %}
+                </span><br/>
+                <span class="line4">{% if day.gdate.day_of_week == 6 %}
+                    {% trans 'Candle light' %} {{ day.times.candlelight }}
+                {% elif day.is_erev_hag and not day.is_hag %}
+                    {% trans 'Candle light' %} {{ day.times.candlelight }}
+                {% elif day.gdate.day_of_week == 7 %}
+                    {% trans 'Shabat ends ' %} {{ day.times.three_stars }}
+                {% elif day.is_hag and not day.is_erev_hag %}
+                    {% trans 'Hag ends ' %} {{ day.times.three_stars }}
+                {% endif %}
+                </span><br/>
+            </td>
+            <td class="day-d">
+              {{ day.hdate.day }} <br/> {{ day.gdate.day }}
+            </td>
+        </tr>
+        {% endfor %}
+        
+    </table>
+    </div>
+    {% endif %}
+
+</div>
+{% endfor %}
+{% endif %}
+
+</body>
+</html>
+
+
+

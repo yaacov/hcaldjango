@@ -159,4 +159,9 @@ body {
   font-size: 36px;
   text-align: center;
 }
-
+.calendar-week.right .day-d {
+  font-size: 24px;
+}
+.calendar-week.left .day-d {
+  font-size: 24px;
+}
