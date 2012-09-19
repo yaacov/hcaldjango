@@ -26,6 +26,8 @@ from django.utils.translation import ugettext as _
 
 from hcal_wrapper import HcalWrapper
 
+import time
+
 def create_calendar_object(hyear):
     ''' create the libhdate calendar object
         and set it's location and time zone
@@ -50,10 +52,9 @@ def create_calendar_object(hyear):
     # set location for tel aviv
     longitude = 32.08 # N
     latitude = 34.8 # E
-    time_zone = 2 # UTC+2
-    dst = 1 # DST - daylight saving time
+    time_zone_and_dst = int(time.altzone / 60 / 60)
     
-    hcal.set_location (longitude, latitude, time_zone + dst)
+    hcal.set_location (longitude, latitude, time_zone_and_dst)
     
     # set holiday and readings (parasha) for Israel / Diaspory
     hcal.set_israel ()
