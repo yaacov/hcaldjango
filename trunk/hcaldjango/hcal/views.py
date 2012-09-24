@@ -52,9 +52,10 @@ def create_calendar_object(hyear):
     # set location for tel aviv
     longitude = 32.08 # N
     latitude = 34.8 # E
-    time_zone_and_dst = int(time.altzone / 60 / 60)
+    time_zone = 2 # israel UTC+2
+    dst = 0 # DST - daylight saving time
     
-    hcal.set_location (longitude, latitude, time_zone_and_dst)
+    hcal.set_location (longitude, latitude, time_zone + dst)
     
     # set holiday and readings (parasha) for Israel / Diaspory
     hcal.set_israel ()
